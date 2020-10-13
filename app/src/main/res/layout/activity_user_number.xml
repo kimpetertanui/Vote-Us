@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        app:elevation="@dimen/_4sdp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tbUserNumber"
+
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize" />
+
+        <ImageView
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_10sdp"
+
+             />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_2sdp"
+        app:cardElevation="@dimen/_8sdp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_logo"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Vote US"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textSize="@dimen/_25sdp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/_2020"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/auth_button_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/buttonshap"
+                    android:padding="@dimen/_10sdp"
+android:textAllCaps="false"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textColor="@android:color/white"
+                    android:text="@string/register_using_your_phone"/>
+                <com.digits.sdk.android.DigitsAuthButton
+                    android:id="@+id/auth_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="next"
+                    android:visibility="gone"
+                    android:layout_margin="@dimen/_30sdp"
+                    android:layout_gravity="center"
+                    android:textColor="@android:color/white"
+                    android:background="@color/colorPrimaryDark"
+                    android:src="@drawable/ic_arrow_forward"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="47dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
